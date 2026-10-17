@@ -1,54 +1,26 @@
-![](https://github.com/xyflow/web/blob/main/assets/codesandbox-header-ts.png?raw=true)
+# Journey Lab
 
-# React Flow starter (Vite + TS)
+A product journey-mapping sandbox adapted for Aayushi’s portfolio from the MIT-licensed [xyflow/vite-react-flow-template](https://github.com/xyflow/vite-react-flow-template). The original copyright and licence are preserved in LICENSE.
 
-We've put together this template to serve as a starting point for folks
-interested in React Flow. You can use this both as a base for your own React
-Flow applications, or for small experiments or bug reports.
+## Added in this adaptation
 
-**TypeScript not your thing?** We also have a vanilla JavaScript starter template,
-just for you!
+- Onboarding and checkout/recovery journey templates.
+- A sidebar for editing step labels and context notes.
+- Add/remove steps and connect paths using React Flow’s canvas.
+- Explicit browser-local saving and JSON export.
+- A deterministic structural review for missing starts/outcomes, unreachable steps, dead ends and decisions with fewer than two outgoing paths.
+- Responsive product workspace and visible upstream attribution.
 
-## Getting up and running
+The underlying graph renderer, node dragging, edge connections, minimap and canvas controls are supplied by React Flow. These are not claimed as original functionality.
 
-You can get this template without forking/cloning the repo using `degit`:
+## Try it
 
-```bash
-npx degit xyflow/vite-react-flow-template your-app-name
-```
+Choose a template; select a step to edit; connect its handles; choose Check journey. Save locally after edits, or export JSON. Templates replace the current canvas only after confirmation. Saved canvases reload in the same browser.
 
-The template contains mostly the minimum dependencies to get up and running, but
-also includes eslint and some additional rules to help you write React code that
-is less likely to run into issues:
+## Boundaries
 
-```bash
-npm install # or `pnpm install` or `yarn install`
-```
+This is a design sandbox, not a workflow execution engine. Structural checks do not validate usability, production readiness, or business outcomes. There is no AI model, backend, authentication, collaboration service, cloud sync, or real user research. Templates are illustrative.
 
-Vite is a great development server and build tool that we recommend our users to
-use. You can start a development server with:
+## Run and deploy
 
-```bash
-npm run dev
-```
-
-While the development server is running, changes you make to the code will be
-automatically reflected in the browser!
-
-## Things to try:
-
-- Create a new custom node inside `src/nodes/` (don't forget to export it from `src/nodes/index.ts`).
-- Change how things look by [overriding some of the built-in classes](https://reactflow.dev/learn/customization/theming#overriding-built-in-classes).
-- Add a layouting library to [position your nodes automatically](https://reactflow.dev/learn/layouting/layouting)
-
-## Resources
-
-Links:
-
-- [React Flow - Docs](https://reactflow.dev)
-- [React Flow - Discord](https://discord.com/invite/Bqt6xrs)
-
-Learn:
-
-- [React Flow – Custom Nodes](https://reactflow.dev/learn/customization/custom-nodes)
-- [React Flow – Layouting](https://reactflow.dev/learn/layouting/layouting)
+`npm ci` then `npm run dev`. Build: `npm run build` (TypeScript and Vite). Vercel framework: Vite; output directory: dist. No paid API or environment variable is required. Production build and browser verification must pass before release is described as complete.
