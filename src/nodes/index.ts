@@ -11,7 +11,7 @@ export const initialNodes: AppNode[] = [
     position: { x: -100, y: 100 },
     data: { label: 'drag me!' },
   },
-  { id: 'c', position: { x: 100, y: 100 }, data: { label: 'your ideas' } },
+  { id: 'c', type: 'default', position: { x: 100, y: 100 }, data: { label: 'your ideas' } },
   {
     id: 'd',
     type: 'output',
